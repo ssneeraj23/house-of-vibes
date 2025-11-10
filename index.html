@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF--8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House of Vibes</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography,aspect-ratio"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              heading: ['Space Grotesk', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Simple smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+      .bg-grid-gray-800\/50 {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 2rem 2rem;
+      }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-950 text-gray-200 min-h-screen antialiased font-sans">
+    
+    <div id="app-wrapper">
+      <!-- Header -->
+      <header class="sticky top-0 z-40 bg-gray-950/80 backdrop-blur-sm shadow-md shadow-gray-900/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+              <a href="#" class="flex items-center space-x-2 text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors font-heading">
+                <img src="./assets/logo.png" alt="House of Vibes Logo" class="h-8 w-8" />
+                <span>House of Vibes</span>
+              </a>
+            </div>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+              <a href="#designs" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium">Designs</a>
+              <a href="#about" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium">About</a>
+              <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+              <button id="open-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-label="Open main menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="fixed inset-0 z-50 bg-gray-950/95 backdrop-blur-sm transition-opacity duration-300 ease-in-out md:hidden opacity-0 pointer-events-none">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
+           <div class="flex items-center justify-between h-16">
+             <a href="#" class="mobile-menu-link flex items-center space-x-2 text-xl font-bold text-cyan-400 font-heading">
+                <img src="./assets/logo.png" alt="House of Vibes Logo" class="h-8 w-8" />
+                <span>House of Vibes</span>
+              </a>
+              <button id="close-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+           </div>
+           <nav class="flex flex-col items-center justify-center flex-grow space-y-8 text-center">
+             <a href="#designs" class="mobile-menu-link text-2xl font-semibold text-gray-200 hover:text-cyan-400 transition-colors">Designs</a>
+             <a href="#about" class="mobile-menu-link text-2xl font-semibold text-gray-200 hover:text-cyan-400 transition-colors">About</a>
+             <a href="#contact" class="mobile-menu-link text-2xl font-semibold text-gray-200 hover:text-cyan-400 transition-colors">Contact</a>
+           </nav>
+           <div class="h-16"></div>
+        </div>
+      </div>
+
+      <main>
+        <!-- Hero Section -->
+        <section class="relative py-20 sm:py-32 md:py-40 bg-gray-950">
+           <div class="absolute inset-0 bg-grid-gray-800/50 [mask-image:linear-gradient(to_bottom,white_10%,transparent_100%)]"></div>
+           <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            <h1 class="font-heading text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight sm:leading-tight md:leading-tight">
+              Code. Culture. <span class="text-cyan-400">Vibes.</span>
+            </h1>
+            <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-400">
+              Exclusive, high-quality apparel for the modern tech enthusiast. Wear your passion, one good vibe at a time.
+            </p>
+            <div class="mt-10">
+              <a href="#designs" class="inline-block bg-cyan-500 text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-cyan-400 transition-all transform hover:scale-105">
+                Explore Designs
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section id="designs" class="py-20 sm:py-28 bg-gray-950">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+              <h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-white">Our Signature Collection</h2>
+              <p class="mt-4 text-lg text-gray-400">Curated designs for students, by students.</p>
+            </div>
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+              <!-- Product cards will be injected here by JavaScript -->
+            </div>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 sm:py-28 bg-gray-900 overflow-hidden">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+              <h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-white">The Spirit of Vibes</h2>
+              <p class="mt-4 text-lg text-gray-400">More than just apparel, it's a statement.</p>
+            </div>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="prose prose-invert lg:prose-lg text-gray-300">
+                    <p>
+                        <strong>House of Vibes</strong> was born in the late-night study sessions and collaborative coding projects of a college campus. We're a brand by students, for students, programmers, and tech enthusiasts who believe that what you wear can be a canvas for your passion.
+                    </p>
+                    <p>
+                        Our mission is simple: to create high-quality, comfortable apparel that celebrates the culture of code, the humor of student life, and the spark of intellectual curiosity. Each design is a conversation starter, a nod to our shared experiences.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 bg-cyan-900/50 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7 text-cyan-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m-7.5-2.962a3.75 3.75 0 1 0-7.5 0 3.75 3.75 0 0 0 7.5 0ZM10.5 1.5a9 9 0 1 0 18 0 9 9 0 0 0-18 0Zm0 0a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white font-heading">For the Community</h3>
+                            <p class="text-gray-400 mt-1">Every T-shirt is designed with our fellow students and programmers in mind, reflecting the jokes and jargon of our world.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 bg-cyan-900/50 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7 text-cyan-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white font-heading">Quality & Comfort</h3>
+                            <p class="text-gray-400 mt-1">We source premium materials because those all-night coding sessions demand maximum comfort.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 bg-cyan-900/50 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7 text-cyan-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white font-heading">Built with Modern Tech</h3>
+                            <p class="text-gray-400 mt-1">As a nod to our craft, this very website is built with modern HTML & CSS and styled with Tailwind CSS—clean, efficient, and modern.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer id="contact" class="bg-black/50 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-gray-400 text-sm">
+              &copy; <span id="current-year"></span> House of Vibes. All Rights Reserved.
+            </p>
+             <p class="text-gray-500 text-sm mt-4 md:mt-0">
+              Designed for vibes, by vibes, at your favorite college campus.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // --- DATA ---
+        const PRODUCTS = [
+          { id: 1, name: 'Declare Variables, Not War.', imageUrl: './tee_designs/design_1.png', altText: 'A black t-shirt with the text Declare Variables Not War.' },
+          { id: 2, name: 'It\'s Not A Bug, It\'s A Feature.', imageUrl: './tee_designs/design_1.png', altText: 'A t-shirt with a witty programming quote about bugs and features.' },
+          { id: 3, name: '404: Sleep Not Found', imageUrl: './tee_designs/design_1.png', altText: 'A humorous t-shirt for sleep-deprived students and developers.' },
+          { id: 4, name: 'I Need My {Space}', imageUrl: './tee_designs/design_1.png', altText: 'A t-shirt with a play on words about CSS and personal space.' },
+          { id: 5, name: 'Sudo Make Me A Sandwich', imageUrl: './tee_designs/design_1.png', altText: 'A classic geek humor t-shirt referencing the sudo command.' },
+          { id: 6, name: 'git commit -m "magic"', imageUrl: './tee_designs/design_1.png', altText: 'A t-shirt poking fun at vague git commit messages.' },
+        ];
+
+        // --- RENDER PRODUCTS ---
+        const productGrid = document.getElementById('product-grid');
+        if (productGrid) {
+          productGrid.innerHTML = PRODUCTS.map(product => `
+            <div class="group relative bg-gray-900/50 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300">
+              <div class="aspect-w-4 aspect-h-5">
+                <img
+                  src="${product.imageUrl}"
+                  alt="${product.altText}"
+                  class="object-cover object-center w-full h-full transform group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+              <div class="absolute bottom-0 left-0 p-4 w-full">
+                <h3 class="font-heading text-lg font-semibold text-white tracking-wide">${product.name}</h3>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        // --- MOBILE MENU ---
+        const openMenuBtn = document.getElementById('open-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        const openMenu = () => {
+          mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+        };
+        const closeMenu = () => {
+          mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        };
+
+        if (openMenuBtn && closeMenuBtn && mobileMenu) {
+            openMenuBtn.addEventListener('click', openMenu);
+            closeMenuBtn.addEventListener('click', closeMenu);
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        }
+
+        // --- UPDATE FOOTER YEAR ---
+        const yearSpan = document.getElementById('current-year');
+        if (yearSpan) {
+          yearSpan.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
